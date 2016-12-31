@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mhap.albumapp">
+    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS"/>
+    <uses-permission android:name="com.android.providers.media.MediaDocumentsProvider"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".HomeScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.mhap.albumapp.AlbumScreen"
+            android:parentActivityName="com.mhap.albumapp.HomeScreen"
+            android:grantUriPermissions = "true"
+            android:permission="android.permission.MANAGE_DOCUMENTS">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mhap.albumapp.HomeScreen" />
+        </activity>
+        <activity
+            android:name="com.mhap.albumapp.PhotoScreen"
+            android:parentActivityName="com.mhap.albumapp.AlbumScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mhap.albumapp.AlbumScreen" />
+        </activity>
+        <activity
+            android:name="com.mhap.albumapp.RenameScreen"
+            android:parentActivityName="com.mhap.albumapp.HomeScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mhap.albumapp.HomeScreen" />
+        </activity>
+        <activity
+            android:name="com.mhap.albumapp.AddAlbumScreen"
+            android:parentActivityName="com.mhap.albumapp.HomeScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mhap.albumapp.HomeScreen" />
+        </activity>
+        <activity
+            android:name="com.mhap.albumapp.EditPhotoScreen"
+            android:parentActivityName="com.mhap.albumapp.PhotoScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mhap.albumapp.PhotoScreen" />
+        </activity>
+        <activity
+            android:name="com.mhap.albumapp.SearchScreen"
+            android:parentActivityName="com.mhap.albumapp.HomeScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mhap.albumapp.HomeScreen" />
+        </activity>
+        <activity
+            android:name="com.mhap.albumapp.ResultsScreen"
+            android:parentActivityName="com.mhap.albumapp.SearchScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mhap.albumapp.SearchScreen" />
+        </activity>
+        <activity
+            android:name="com.mhap.albumapp.ResultsPhotoScreen"
+            android:parentActivityName="com.mhap.albumapp.ResultsScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mhap.albumapp.ResultsScreen" />
+        </activity>
+        <activity
+            android:name="com.mhap.albumapp.ResultsPhotoEditScreen"
+            android:parentActivityName="com.mhap.albumapp.ResultsPhotoScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mhap.albumapp.ResultsPhotoScreen" />
+        </activity>
+
+        <activity
+            android:name="com.mhap.albumapp.MovePhoto"
+            android:parentActivityName="com.mhap.albumapp.ResultsPhotoScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mhap.albumapp.MovePhoto" />
+        </activity>
+
+
+    </application>
+
+</manifest>

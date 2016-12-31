@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <!--  Title bar -->
+    <!--
+    -->
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="center_horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/textView"
+            android:layout_weight="1"
+            android:background="#449adc" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:text="Name Album"
+            android:id="@+id/textView2"
+            android:layout_weight="1"
+            android:background="#449adc"
+            android:textColor="#ffffff"
+            android:textAlignment="center"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/textView3"
+            android:layout_weight="1"
+            android:background="#449adc" />
+    </LinearLayout>
+
+    <!--  Form for adding -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:padding="20dp"
+        android:weightSum="1">
+
+
+
+        <!--  Song name label -->
+
+        <!-- Song name field -->
+
+        <EditText
+            android:id="@+id/new_name"
+            android:layout_width="match_parent"
+            android:background="@android:drawable/editbox_background"
+
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:layout_weight="0.05" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.24">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/save"
+                android:layout_gravity="center"
+                android:text="Save" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cancel"
+                android:layout_gravity="right|center_vertical"
+                android:text="Cancel" />
+        </FrameLayout>
+
+        <!--  Song artist label -->
+
+        <!-- Song artist field -->
+
+        <!--  Song album label -->
+
+        <!-- Song album field -->
+
+        <!--  Song year label -->
+
+        <!-- Song year field -->
+
+        <!--  Buttons for save and cancel -->
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">AlbumApp</string>
+    <string name="rename_album">Rename Album</string>
+    <string name="delete_album">Delete Album</string>
+    <string name="move_photo">Move to...</string>
+    <string-array name="tag_types">
+        <item>Name</item>
+        <item>Location</item>
+    </string-array>
+
+
+    <string name="edit_photo">Edit Photo</string>
+    <string name="delete_photo">Delete Photo</string>
+    <string name="form_pick_photos"> Choose a photo</string>
+
+</resources>

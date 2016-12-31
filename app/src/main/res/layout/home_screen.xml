@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="center_horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="#449adc"
+            android:drawableLeft="@mipmap/ic_search"
+            android:id="@+id/search" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:text="Albums"
+            android:id="@+id/textView2"
+            android:layout_weight="1"
+            android:background="#449adc"
+            android:textColor="#ffffff"
+            android:textAlignment="center"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/add"
+            android:layout_weight="1"
+            android:background="#449adc"
+            android:drawableRight="@mipmap/ic_add_album"/>
+    </LinearLayout>
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/album_list"
+        android:numColumns="2"
+        android:columnWidth="90dp"
+        android:clickable="false"
+        android:horizontalSpacing="10dp"
+        android:paddingEnd="0dp"
+        android:paddingStart="0dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:verticalSpacing="70dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"></LinearLayout>
+
+</LinearLayout>
